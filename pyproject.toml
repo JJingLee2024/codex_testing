@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmail-mcp-service"
+version = "0.1.0"
+description = "Model Context Protocol service that bridges Gmail with ChatGPT"
+authors = [{name = "Your Name", email = "you@example.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-api-python-client",
+    "openai",
+    "pydantic>=1.10,<3",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+development = [
+    "pytest",
+    "requests"
+]
+
+[project.urls]
+Homepage = "https://example.com"
